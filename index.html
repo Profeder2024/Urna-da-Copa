@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Urna Eletrônica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="urna-container">
+
+  <div class="tela">
+
+    <div class="topo">
+      <h1>JUSTIÇA ELEITORAL</h1>
+    </div>
+
+    <div class="conteudo" id="conteudo">
+
+      <div class="esquerda">
+
+        <div class="cargo">
+          VEREADOR
+        </div>
+
+        <div class="numeros">
+          <div class="numero" id="n1"></div>
+          <div class="numero" id="n2"></div>
+        </div>
+
+        <div class="info">
+          <p><strong>Nome:</strong> <span id="nome"></span></p>
+          <p>
+  <strong>Time:</strong>
+  <span id="time"></span>
+</p>
+
+<p>
+  <strong>Posição:</strong>
+  <span id="posicao"></span>
+</p>
+        </div>
+
+        <div class="mensagem" id="mensagem"></div>
+
+      </div>
+
+      <div class="direita">
+        <img id="foto" src="" alt="Foto do candidato">
+      </div>
+
+    </div>
+
+    <div class="rodape">
+      Aperte a tecla:<br>
+      CONFIRMA para CONFIRMAR este voto<br>
+      CORRIGE para REINICIAR este voto
+    </div>
+
+  </div>
+
+  <div class="teclado">
+
+    <div class="teclas-numericas">
+      <button onclick="clicou(1)">1</button>
+      <button onclick="clicou(2)">2</button>
+      <button onclick="clicou(3)">3</button>
+
+      <button onclick="clicou(4)">4</button>
+      <button onclick="clicou(5)">5</button>
+      <button onclick="clicou(6)">6</button>
+
+      <button onclick="clicou(7)">7</button>
+      <button onclick="clicou(8)">8</button>
+      <button onclick="clicou(9)">9</button>
+
+      <button class="zero" onclick="clicou(0)">0</button>
+    </div>
+
+    <div class="funcoes">
+      <button class="branco" onclick="branco()">BRANCO</button>
+      <button class="corrige" onclick="corrige()">CORRIGE</button>
+      <button class="confirma" onclick="confirma()">CONFIRMA</button>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="relatorios">
+  <button onclick="gerarZeresima()">ZERÉSIMA</button>
+  <button onclick="gerarBoletim()">BOLETIM DE URNA</button>
+</div>
+
+<audio id="somTecla" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+<audio id="somConfirma" src="confirma-urna.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

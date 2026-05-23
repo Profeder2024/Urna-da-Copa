@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #d7dde8, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.urna-container {
+  background: #c8c8c8;
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  gap: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.tela {
+  width: 550px;
+  background: #fff;
+  border: 10px solid #888;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.topo h1 {
+  font-size: 30px;
+}
+
+.conteudo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.esquerda {
+  width: 70%;
+}
+
+.cargo {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.numeros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.numero {
+  width: 65px;
+  height: 75px;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  animation: pisca 1s infinite;
+}
+
+@keyframes pisca {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.info p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.direita {
+  width: 25%;
+}
+
+.direita img {
+  width: 100%;
+  border: 2px solid #000;
+  display: none;
+}
+
+.mensagem {
+  margin-top: 20px;
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+}
+
+.rodape {
+  margin-top: 25px;
+  border-top: 2px solid #ccc;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.teclado {
+  background: #2d2d2d;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.teclas-numericas {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 12px;
+}
+
+.teclas-numericas button {
+  height: 60px;
+  font-size: 28px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px #000;
+}
+
+.teclas-numericas button:active {
+  transform: translateY(2px);
+}
+
+.zero {
+  grid-column: 2;
+}
+
+.funcoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.funcoes button {
+  flex: 1;
+  height: 60px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.branco {
+  background: white;
+}
+
+.corrige {
+  background: orange;
+}
+
+.confirma {
+  background: green;
+  color: white;
+}
+
+.fim {
+  font-size: 70px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin-top: 80px;
+  animation: fim 1s infinite alternate;
+}
+
+@keyframes fim {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.relatorios {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.relatorios button {
+  padding: 14px 22px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .urna-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tela {
+    width: 100%;
+  }
+}
